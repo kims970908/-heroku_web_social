@@ -43,15 +43,11 @@ const EditProfile = ({ setOnEdit }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(updateProfileUser({ userData, avatar, auth }));
+    setOnEdit(false)
   };
   return (
     <div className="edit_profile">
-      <button
-        className="btn btn-danger btn_close"
-        onClick={() => setOnEdit(false)}
-      >
-        취소
-      </button>
+      
       <form onSubmit={handleSubmit}>
         <div className="info_avatar">
           <img
@@ -162,6 +158,12 @@ const EditProfile = ({ setOnEdit }) => {
         <button className="btn btn-info w-100" type="submit">
           저장
         </button>
+        <button
+        className="btn btn-danger btn_close"
+        onClick={() => setOnEdit(false)}
+      >
+        취소
+      </button>
       </form>
     </div>
   );

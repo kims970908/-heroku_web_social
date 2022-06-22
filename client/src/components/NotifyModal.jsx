@@ -75,10 +75,9 @@ const NotifyModal = () => {
               {msg.image && (
                 <div style={{ width: "30px" }}>
                   {
-                    // msg.image.macth(/video/i)
-                    // ?<video src={msg.image} width="100%" />
-                    // :<Avatar src={msg.image} size="medium-avatar" />
-                    <Avatar src={msg.image} size="medium-avatar" />
+                    msg.image.macth(/video/i)
+                    ?<video src={msg.image} width="100%" />
+                    :<Avatar src={msg.image} size="medium-avatar" />
                   }
                 </div>
               )}
